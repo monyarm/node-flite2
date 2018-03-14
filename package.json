@@ -1,6 +1,6 @@
 {
   "name": "flite2",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "binding for flite, a tiny text-to-speech synthesizer. This fork is compatible with flite 2.0",
   "main": "flite2.js",
   "scripts": {

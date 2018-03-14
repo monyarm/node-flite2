@@ -129,7 +129,7 @@ function cmd(also) {
 }
 
 function escapeshell(cmd) {
-  return '"'+cmd.replace(/(["\s'$`\\])/g,'\\$1')+'"';
+  return '"'+cmd.replace(/(["\s'$`\(\)\[\]\\\.\,\;\:])/g,'\\$1')+'"';
 }
 
 function noop() {}
