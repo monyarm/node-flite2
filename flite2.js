@@ -1,5 +1,5 @@
 // node-flite2 is a fork from the original node-flite
-// made to make it compatible with the current 2.0 version of 
+// made to make it compatible with the current 2.x version of 
 // flite. It also releases a control on the voices, that
 // prevented it from using user-imported voices.
 // (copyleft)ianni67 2018. Please share and enjoy.
@@ -35,9 +35,9 @@ function init(config, cb) {
 function detectFeatures(cb) {
   var usage = /usage/i;
   child.exec('flite --version', function (err, stdout) {
-    dep.flite = /flite-2\.0/.test(stdout);
+    dep.flite = /flite-2\./.test(stdout);
     dep.flite = dep.flite || (/flite-1\.4/.test(stdout));
-    // both versions 2.0.x and 1.4.x are valid  
+    // both versions 2.x.x and 1.4.x are valid  
     if (!dep.flite) {
       dep.init = true;
       return cb(new Error('required binary flite not available'));
